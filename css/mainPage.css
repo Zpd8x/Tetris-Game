@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: pixel;
+    src: url('../font/Minecraft.ttf');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: url('../image/BCK02.jpg');
+}
+
+body::after {
+    content: ' ';
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    position: absolute;
+    z-index: -1;
+}
+
+img {
+    margin-bottom: 120px;
+}
+
+h2 {
+    font-family: pixel;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+    animation: tracking-in-expand 1.8s ease-in both infinite;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes tracking-in-expand
+{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+  

@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/** Import font Offline **/
+@font-face {
+    font-family: pixle;
+    src: url("../font/Minecraft.ttf");
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../image/BCK02.jpg');
+    background-size: cover;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 450px;
+    border-radius: 12px;
+    background: #00308F;
+}
+
+.asidebar {
+    width: auto;
+    height: 405px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+canvas{
+    display: block;
+    margin:0 auto;
+}
+
+.scoreBar{
+    display: inline;
+    font-family: pixle;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#score{
+    display: block;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: 4px;
+}
+
+.controlers {
+    font-family: monospace;
+    text-align: center;
+    font-weight: bold;
+    border: 1.5px solid #fff;
+    color: #fff;
+    padding: 5.5px;
+    margin-top: 38px;
+}
+.controlers h4 {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 22px;
+}
+
+.controlers .control li {
+    list-style-type: none;
+    text-align: left;
+}
+
+/** Game Over Screen **/
+.game-over-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 44.5%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.game-over-message h2 {
+    margin-bottom: 10px;
+}
+
+/** Next Tetromino **/
+.next-piece {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.next-piece h4 {
+    color: #fff;
+    font-family: pixle;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+#next-piece-canvas {
+    border: 1px solid white;
+    padding: 0px 24px;
+}
+
+/** Sound Track **/
+.playSound {
+    position: absolute;
+    top: 2%;
+    left: 95%;
+    cursor: pointer;
+}
+
+/* Custom The Button in Buttom of Main */
+.buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 45px;
+    /* background-color: rgb(196, 113, 196); */
+    top: 90%;
+    left: 42.5%;
+}
+
+.buttons .left, .right, .rotate, .down{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    background-color: #00308F;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding-top: 5px;
+    transition: .3s ease-in;
+}
+
+.buttons .left:hover, .right:hover, .rotate:hover, .down:hover {
+    background-color: #003ebb;
+}
+
+.rotate {
+    padding-top: 10px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris | Main</title>
+    <link rel="stylesheet" href="css/mainPage.css">
+	<link rel="shortcut icon" type="image/png" href="./image/ico.png"/>
+</head>
+<body>
+    <img src="image/tetris.png" alt="Logo-Tetris.png">
+    <a href="index.html" onclick="playAudioAndNavigate()">
+        <h2>Press 'Enter' to start game.</h2>
+    </a>
+
+    <script type="text/javascript">
+        document.addEventListener('keydown', enter);
+
+        function playAudioAndNavigate() {
+            const audio = new Audio("./audio/enter.mp3");
+            audio.play();
+        
+            setTimeout(() => {
+                window.location.href = "main.html";
+            }, 1500);
+        }
+
+        function enter(key) {
+            if (key.keyCode === 13) {
+                playAudioAndNavigate();
+            }
+        }
+    </script>
+</body>
+</html>
